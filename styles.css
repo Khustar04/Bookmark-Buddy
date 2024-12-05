@@ -1,0 +1,340 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(109.6deg, rgba(102, 51, 153, 1) 11.2%, rgba(2, 0, 4, 1) 91.1%);
+   
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 10px;
+    position: relative;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: whitesmoke;
+    overflow: hidden;
+    /* Hides any overflow within the header */
+    box-sizing: border-box;
+
+}
+
+header>h1 {
+    color: white;
+    text-shadow: 0px 0px 10px purple, 0px 0px 20px purple, 0px 0px 40px purple, 0px 0px 80px purple;
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: index 1;
+    ;
+}
+
+.box-1 {
+    height: 70vh;
+    width: 35%;
+    margin: 0px 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    top: 15px;
+    gap: 10px;
+    /* Glassmorphism effect */
+    background: rgba(138, 43, 226, 0.5);
+    /* Transparent blueviolet */
+    backdrop-filter: blur(10px);
+    /* Adds blur to the background */
+    border-radius: 15px;
+    /* Smooth, rounded corners */
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    /* Light border for glass effect */
+    box-shadow: -5px 19px 20px 0px rgba(0, 0, 0, 0.3);
+    /* Subtle shadow for depth */
+
+    /* Glossy effect using a gradient overlay */
+    position: relative;
+    /* For absolute positioning of the gloss */
+    overflow: hidden;
+    /* To ensure the gloss does not overflow */
+}
+
+/* Glossy overlay effect */
+.box-1::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(145deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0));
+    opacity: 0.6;
+    /* Adjust opacity for the gloss effect */
+    pointer-events: none;
+    /* Ensures the overlay doesn't interfere with clicks */
+    
+}
+
+#bookmarks-list {
+    height: 70vh;
+    width: 35%;
+    margin: 0px 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    top: 15px;
+    gap: 10px;
+    background: rgba(138, 43, 226, 0.5);
+    /* Transparent blueviolet */
+    backdrop-filter: blur(10px);
+    /* Adds blur to the background */
+    border-radius: 15px;
+    /* Smooth, rounded corners */
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    /* Light border for glass effect */
+    box-shadow: -5px 19px 20px 0px rgba(0, 0, 0, 0.3);
+    /* Subtle shadow for depth */
+
+    /* Glossy effect using a gradient overlay */
+    position: relative;
+    /* For absolute positioning of the gloss */
+    overflow: hidden;
+    /* To ensure the gloss does not overflow */
+}
+
+#bookmarks-list::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #0f0c29;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #24243e, #302b63, #0f0c29);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #24243e, #302b63, #0f0c29);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    opacity: 0.6;
+    pointer-events: none;
+}
+
+#bookmarks-list a {
+    text-decoration: none;
+    width: 15vw;
+    height: 10px;
+    left: 4px;
+    padding: 10px;
+    border: 1px solid #40206182;
+    border-radius: 5px;
+    background-color: rgb(47, 44, 47);
+    color: rgb(0, 191, 255);
+    font-family: Roboto, sans-serif;
+    font-size: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    flex-direction: column;
+
+
+}
+
+#bookmarks-list ul {
+    list-style: none;
+    height: 100%;
+    overflow-y: scroll;
+
+}
+
+#bookmarkItems li {
+    margin-bottom: 10px;
+    display: flex;
+    gap: 8px;
+    /* Adds a 10px gap between each bookmark item */
+}
+
+#bookmarkItems h1 {
+    position: relative;
+    margin-top: 10px;
+    display: flex;
+
+}
+
+.box-1 input {
+    width: 50vh;
+    max-width: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 10px;
+}
+
+input[type="text"] {
+    width: 365px;
+    height: 10px;
+    padding: 10px;
+    border: 1px solid #40206182;
+    border-radius: 5px;
+    background-color: rgba(22, 20, 24, 0.507);
+    color: white;
+    font-family: Roboto, sans-serif;
+    font-size: 10px;
+    opacity: 0.80;
+}
+
+input[type="text"]::placeholder {
+    color: white;
+}
+
+input[type="text"]:focus {
+    outline: none;
+    box-shadow: 0 0 5px rgba(15, 15, 15, 0.546);
+}
+
+.box-2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    gap: 13px;
+    top: 12px;
+    position: relative;
+
+}
+
+.box-2 button {
+    background-color: #8449bca6;
+    padding: 10px;
+    border: none;
+    backdrop-filter: blur(10px);
+    /* Adds blur to the background */
+    border-radius: 15px;
+    /* Smooth, rounded corners */
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    /* Light border for glass effect */
+    box-shadow: -5px 19px 20px 0px rgba(0, 0, 0, 0.3);
+    /* Subtle shadow for depth */
+    font-family: Roboto, sans-serif;
+    font-size: 14px;
+    cursor: pointer;
+
+}
+
+.box-2 button::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(145deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0));
+    opacity: 0.3;
+    /* Adjust opacity for the gloss effect */
+    pointer-events: none;
+}
+
+.box-2 button:hover {
+    background-color: rgba(249, 249, 249, 0.393);
+    /* Adjust color and opacity as needed */
+    opacity: 0.9;
+    transform: scale(1.04);
+
+}
+
+.copy-btn {
+    border: 1px solid black;
+    border-radius: 8px;
+    padding: 0px 10px;
+    background-color: grey;
+    font-size: 13px;
+    font-weight: bolder;
+    cursor: pointer;
+
+
+}
+
+.delete-btn {
+    border: 1px solid black;
+    border-radius: 8px;
+    padding: 0px 10px;
+    background-color: grey;
+    font-size: 13px;
+    font-weight: bolder;
+    cursor: pointer;
+}
+
+.copy-btn:hover {
+    background-color: black;
+    color: white;
+}
+
+.delete-btn:hover {
+    background-color: black;
+    color: white;
+}
+.reset-btn{
+    background-color: grey;
+    border: none;
+    padding: 5px 10px;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        padding: 20px;
+        height: 100vh;
+
+
+    }
+
+    .box-1,
+    #bookmarks-list {
+        width: 90%;
+        height: 274px;
+        margin: 10px 0;
+        right: auto;
+
+    }
+    
+    #bookmarks-list {
+        height: 60vh;
+        
+    }
+    #bookmarks-list a{
+        width: 40vw;
+        max-width: 100%;
+    }
+    body{
+       height: auto;
+    }
+    header {
+        font-size: 1rem;
+        padding: 10px;
+    }
+
+    .box-1 input {
+        width: 100%;
+        height: 30px;
+    
+    }
+}
+
+
+

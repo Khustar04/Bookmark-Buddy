@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookmark Buddy</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <h1>Bookmark Buddy</h1>
+    </header>
+    <div class="container">
+        <div class="box-1">
+            <input type="text" id="bookmarkName" placeholder="Bookmark Name">
+            <input type="text" id="bookmarkLink" placeholder="Bookmark URL">
+            <div class="box-2">
+                <button onclick="addBookmark()">Add Bookmark</button>
+                <button onclick="sortBookmarks()">Sort Bookmarks</button>
+               
+            </div>
+            <button onclick="resetBookmarks()" class="reset-btn">Reset All Bookmarks</button>
+        </div>
+        <div id="bookmarks-list">
+            <h1>Shorted Links</h1>
+            <ul id="bookmarkItems"></ul>
+            
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
