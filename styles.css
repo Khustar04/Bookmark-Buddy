@@ -161,6 +161,19 @@ header>h1 {
 
 }
 
+#bookmarks-list ul ::-webkit-scrollbar{
+    width: 10px;
+}
+
+#bookmarks-list ul::-webkit-scrollbar-thumb {
+    background: #888; /* Color of the scroll thumb */
+    border-radius: 5px;
+}
+
+#bookmarks-list ul::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+}
+
 #bookmarkItems li {
     margin-bottom: 10px;
     display: flex;
